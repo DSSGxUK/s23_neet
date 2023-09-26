@@ -62,15 +62,15 @@ people’s successful transition into adulthood.
 
 # Contributors:
 
-**Andrew Kitchen (Project Manager)**
+**Andrew Kitchen (Project Manager)** 
 
-**Nazeefa Muzammil (Fellow)**
+**Nazeefa Muzammil (Fellow)** 
 
-**Emmanuel Owusu Ahenkan (Fellow)**
+**Emmanuel Owusu Ahenkan (Fellow)** 
 
-**Mahima Tendulkar (Fellow)**
+**Mahima Tendulkar (Fellow)** 
 
-**Yannick Stadtfeld (Fellow)**
+**Yannick Stadtfeld (Fellow)** 
 
 **Aygul Zagidullina (Technical Mentor)**
 
@@ -91,7 +91,7 @@ EY Foundation
 
 # Project Resources
 
-Poster:
+Poster: 
 
 Presentation:
 
@@ -108,17 +108,17 @@ National Client Caseload Information System (NCCIS) data is submitted to the Dep
 for Education(DfE) by the local authorities. It monitors and records the extent to which the individual is involved with education and training. It is the file which contains the target variable for our prediction model (through the activity codes).
 
 # School Census Data
-This data provides demographic information about students such as gender, ethnicity, age, language, eligibility for Free School Meals (FSMs) or Special Educational Needs (SENs).
+This data provides demographic information about students such as gender, ethnicity, age, language, eligibility for Free School Meals (FSMs) or Special Educational Needs (SENs). 
 
 # KS4 Data
 It holds information related to the student's grades and various attainment scores.
 
 # Attendance Data
-This data captures the attendance of students along with features as termly sessions, absences, and reasons for absences, e.g. exclusions, late entries etc.
+This data captures the attendance of students along with features as termly sessions, absences, and reasons for absences, e.g. exclusions, late entries etc. 
 
 # School Level Data
 
-The data is obtained
+The data is obtained 
 from https://www.find-school-performance-data.service.gov.uk/download-data. This source con-
 tains the school performance data for all of the England, and it was filtered at the local authority basis. This school performance data included information about the
 school postcode, that was used for the feature engineering to calculate the distance from the individual’s place of living
@@ -153,14 +153,13 @@ categorise the living area of a student according to the various bands.
 To install the "neet" package at your local machine, download or clone the GitHub repository, later once opened in the IDE, run the following commands in the terminal:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
 
 pyenv virtualenv 3.10.6 neetenv # create virtual environment called neetenv based on python version 3.10.6
 pyenv local neetenv # set neetenv as local virtual environment
 
-pip install -e .
+pip install -e . 
 ```
-Once the local virtual environment is created, the .python-version file will appear in your local folder.
 
 # Running the App (Streamlit)
 
@@ -170,14 +169,14 @@ To run the app in the browser (localhost), run the following command in the term
 
 make run_streamlit
 
-# streamlit run ./neet/streamlit_api/Home.py
+# streamlit run ./neet/streamlit_api/Home.py 
 # alternative option
 
 ```
 
 # Deployment of the App (Docker)
 
-To build the Docker image and run it use the following commands in the terminal:
+To build the Docker image and run it use the following commands in the terminal: 
 
 ```bash
 docker build -t neet-image .
@@ -185,10 +184,10 @@ docker build -t neet-image .
 docker run -p 8501:8501 --env-file .env --name neet-container neet-image
 ```
 
-After that, you will be able to see the result at the local host.
+After that, you will be able to see the result at the local host. 
 
-Visit [http://localhost:8501/](http://localhost:8501/) and check out the running NEETalert App.
+Visit [http://localhost:8501/](http://localhost:8501/) and check out the running NEETalert App. 
 
 <br>
 
-Additionally, please check the Makefile for the useful docker and other commands.
+Additionally, please check the Makefile for the useful docker and other commands. 
