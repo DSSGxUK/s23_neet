@@ -1,0 +1,26 @@
+# This contains the list of files/folders that would not be tracked by Git #
+
+# VS Code
+.vscode/
+
+# Jupiter Notebook #
+*.ipynb_checkpoints
+
+# Exclude all pycache and package files
+**/__pycache__/
+*.pyc
+build/
+*.egg/
+*.egg-info/
+neet.egg-info/*
+.python-version
+
+# Unit Tests #
+.pytest_cache/
+
+# IDEs '
+.vscode/
+
+# Data #
+data_develop/
+data_dashboard/

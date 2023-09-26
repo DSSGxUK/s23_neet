@@ -1,0 +1,25 @@
+/* Add global styling for every page */
+
+footer {
+    display: none !important;
+}
+
+h2 {
+    margin-top: 2rem;
+}
+
+section[data-testid='stSidebar'] ul {
+    max-height: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Add background color to metric container */
+div[data-testid='metric-container'] {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 0.25rem;
+    background-color: #F3EDF3;
+}

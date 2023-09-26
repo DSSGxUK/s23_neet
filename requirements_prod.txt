@@ -1,0 +1,19 @@
+# This is the strict minimum of the requirements.
+
+et-xmlfile==1.1.0
+imbalanced-learn==0.11.0
+lightgbm==4.0.0
+matplotlib==3.7.1
+matplotlib-inline==0.1.6
+numpy==1.24.3
+openpyxl==3.1.2
+pandas==2.0.2
+pandera==0.16.1
+plotly
+python-dotenv
+scikit-learn==1.2.2
+scipy==1.10.1
+streamlit==1.23.1
+seaborn==0.11.0
+shap==0.42.1
+
