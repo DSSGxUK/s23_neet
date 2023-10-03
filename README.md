@@ -93,7 +93,7 @@ EY Foundation
 
 Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf) 
 
-Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard%20Final%20Presentation.pptx)
+Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard-Final-Presentation.pdf)
 
 Demo at the Streamlit Cloud:
 
