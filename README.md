@@ -91,9 +91,9 @@ EY Foundation
 
 # Project Resources
 
-Poster: 
+Poster: available [here]([https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf]) 
 
-Presentation:
+Presentation: 
 
 Demo at the Streamlit Cloud:
 
