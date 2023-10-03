@@ -91,7 +91,7 @@ EY Foundation
 
 # Project Resources
 
-Poster: available [here]([https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf]) 
+Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf) 
 
 Presentation: 
 
