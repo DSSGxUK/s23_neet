@@ -95,7 +95,7 @@ Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documen
 
 Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard-Final-Presentation.pdf)
 
-Demo at the Streamlit Cloud:
+Demo at the Streamlit Cloud:[here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
 
 <br>
 
