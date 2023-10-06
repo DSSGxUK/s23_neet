@@ -97,6 +97,8 @@ Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/d
 
 Demo at the Streamlit Cloud:[here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
 
+Video from the Shard: [here](https://warwick.ac.uk/research/data-science/warwick-data/dssgx/neet_2023.mp4)
+
 <br>
 
 <details>
