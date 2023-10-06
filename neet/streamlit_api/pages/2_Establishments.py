@@ -61,7 +61,7 @@ def main():
     """Renders the contents of the streamlit page."""
 
     # Add global styles and load state
-  
+
     ut.initalize_global_state()
     ut.short_circuit_data()
 
@@ -86,12 +86,12 @@ def main():
 
     # Bail early if no uid is selected
     if not estab:
-        st.warning("Please select one establishment")
+        st.warning("Please select an establishment using the menu on the left")
         return
 
     #estab_data = data[data["census_estab"].str.lower().isin(map(str.lower, estab))]
     selected = data.loc[data["census_estab"].str.lower() == estab.lower()]
-    
+
     # Data should be available
     if selected.empty:
         st.warning("No data available for your selections.")
@@ -191,8 +191,8 @@ def main():
         use_container_width=True,
         config=PLOTLY_CONFIG,
     )
-    
-    
+
+
 # Run the Streamlit app
 if __name__ == "__main__":
     main()

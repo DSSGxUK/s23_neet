@@ -18,45 +18,91 @@ def main():
 
     st.title("Instructions")
 
-    st.header("Table of Contents")
-
-    st.header("About the Project")
+    st.header("About the Data")
 
     st.markdown(
-        "This project was a collaboration between Buckinghamshire Council, the EY Foundation and Data Science for Social Good UK."
-    )
+        '''
+        The NEETalert tool is dependent on a variety of different datasets.
+        The more **complete** or **comprehensive** the data collated within each dataset is,
+        the **better the performance of the tool**, in terms of provision of risk of NEET predictions.
 
-    st.markdown(
-        "The goal of the project was to build a model for predicting which pupils in Buckinghamshire are at high risk of becoming NEET (Not in Education, Employment or Training) in the future, using a range of different datasets such as the School Census and National Client Caseload Information System (NCCIS) database."
-    )
-
-    st.header("Challenge")
-
-    st.markdown(
-        "Between 2018 and 2020, Buckinghamshire county had a NEET rate of above 2% and Unknown destination rate of above 5% for young people aged 17 to 18."
-    )
-
-    st.markdown(
-        "Studies have shown that time spent NEET can have a detrimental effect on physical and mental health, increasing the likelihood of unemployment, low wages, or low quality of work later on in life. Buckinghamshire Council wanted to identify students’ risk of becoming NEET in years 12 or 13 (ages 17-18), by the end of years 10 or 11 (ages 14-16) so that they could target the right pupils with early intervention programmes. It is hoped that doing so will improve the life chances of those young people who receive intervention that they otherwise may not have done."
-    )
-
-    st.header("About the data schemas")
-
-    with st.expander("CCIS"):
-        st.markdown(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        Please follow the instructions to provide the correct data formatting for the tool to work.
+        '''
         )
-    with st.expander("School Census"):
+
+
+    st.header("Datasets")
+
+    with st.expander("NCCIS Data"):
         st.markdown(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            '''
+            National Client Caseload Information System (NCCIS) data is submitted to
+            the Department for Education(DfE) by the local authorities.
+            It monitors and records the extent to which an individual is involved in
+            education and training. It is the file which contains the target variable
+            for our prediction model (through the activity codes).
+
+            The data uploader expects each NCCIS file to contain the following columns of
+            data as a minimum:
+
+            stud_id, age, academic_age, support_level, looked_after_in_care, caring_for_own_child,
+            refugee_asylum_seeker, carer_not_own_child, substance_misuse, care_leaver, supervised_by_yots,
+            pregnancy, parent, teenage_mother, send, alternative_provision, sensupport,
+            confirmed_date, postcode, nccis_code, ncciscohort
+
+            '''
         )
-    with st.expander("Attainment (KS2 and KS4)"):
+    with st.expander("School Census Data"):
         st.markdown(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            '''
+            This data provides demographic information about individuals such as gender,
+            ethnicity, age, language, eligibility for Free School Meals (FSMs) or
+            Special Educational Needs (SENs).
+
+            The data uploader expects each School Census file to contain the following
+            columns of data as a minimum:
+
+            stud_id, date_of_birth, forename, surname, estab, gender, entry_date,
+            ncyear_actual, ethnicity, language, senprovision, senneed1, senneed2, senunit_indicator,
+            resourced_provision_indicator, fsme_on_census_day, age
+            '''
         )
-    with st.expander("Attendance"):
+    with st.expander("Attainment Data"):
         st.markdown(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+            '''
+            It holds information related to the individual’s grades and various attainment scores.
+
+            The data uploader expects each Attainment file to contain the following columns
+            of data as a minimum:
+
+            stud_id, ks4_acadyr, ks4_yeargrp, ks4_actyrgrp, ks4_la, ks4_estab, ks4_att8,
+            ks4_pass_94, ks4_priorband_ptq_ee'''
+        )
+    with st.expander("Attendance Data"):
+        st.markdown(
+            '''
+            This data captures the attendance of individuals along with features as termly sessions,
+            absences, and reasons for absences, e.g. exclusions, late entries etc.
+
+            The data uploader expects each Attendance file to contain the following columns
+            of data as a minimum:
+
+            stud_id, possible_sessions, attendance_count, authorised_absence, unauthorised_absence,
+            excluded_e_count
+            '''
+        )
+
+    with st.expander("Exclusions Data"):
+        st.markdown(
+            '''
+            This data captures the information about an individual’s historical exclusion status.
+
+            The data uploader expects each Attendance file to contain the following columns
+            of data as a minimum:
+
+            stud_id, ever_suspended, ever_excluded, exclusions_rescinded
+
+            '''
         )
 
 

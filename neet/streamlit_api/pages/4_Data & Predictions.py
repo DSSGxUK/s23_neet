@@ -10,10 +10,8 @@ from utils import (
     COHORTS,
     literal_cohorts,
 )
-from neet.data_sources.preprocessing_functions import read_csv_file
-from neet.data_sources.schema import get_schema
-from neet.constants import DATA_STREAMLIT_RAW_PATH
-
+from data_sources.preprocessing_functions import read_csv_file
+from data_sources.schema import get_schema
 
 st.set_page_config(
     page_title="Data & Predictions - NEETalert",
@@ -384,7 +382,7 @@ def render_upload_form() -> None:
             st.markdown("\n")
 
             """
-            Upload all the NCCIS data that is available for this cohort. 
+            Upload all the NCCIS data that is available for this cohort.
             The tool does predictions for the next 6 month. That is why it
             is important to upload the most recent NCCIS datasets.
             """
@@ -471,21 +469,21 @@ def render_school_performance_uploader() -> None:
     def remove_schools_performance() -> None:
         """Remove the school performance data from the sessions state."""
         st.session_state.file_schools_performance = None
-       
+
 
     with st.expander("Upload school performance data", expanded=True):
         st.header("School performance data")
         st.markdown(
-            """Please upload information about each school to enhance the predictions. 
+            """Please upload information about each school to enhance the predictions.
             You can download the correct dataset from the Department of Eduction website."""
         )
-        
+
         # Bail early if we already have a file
         if st.session_state.file_schools_performance is not None:
             file = (st.session_state.file_schools_performance)["file"]
             st.write(f"Uploaded file: *{file.name}*")
             st.button("Remove file", on_click=remove_schools_performance)
-            return  
+            return
 
         file = st.file_uploader(
             "Upload school performance data",
@@ -510,10 +508,10 @@ def render_school_performance_uploader() -> None:
                     err.failure_cases, use_container_width=True, hide_index=True
                 )
                 return
-   
+
             # Write file to state for UI and df for further processing
             st.session_state.file_schools_performance = {"file":file, "df":df}
-            
+
             # Re-run so the interface looks correct.
             st.experimental_rerun()
 
@@ -568,10 +566,10 @@ def render_list_of_files() -> None:
 
     st.header("Uploaded files")
     """
-    Below you can find the cohorts that are available in the dashboard. Cohorts are
-    based on Year 11. 
+    Below you can find the cohorts available in the dashboard. Cohorts are
+    based on Year 11.
     The correct prediction is automatticaly determined by the latest available NCCIS
-    file. Predictions are only generated for cohorts with incomplete NCCIS data.
+    file. Predictions are only generated for cohorts with complete NCCIS data.
     """
 
     if not st.session_state.data_raw:
@@ -647,9 +645,9 @@ def main():
     render_list_of_files()
 
     st.header("Process data & calculate predictions", anchor=False)
-    """   
-    A prepared machine learning model is used to make predictions about NEET students
-    based on the provided data. This model is fast and should creat valid predictions. 
+    """
+    A prepared machine learning model is used to make predictions about NEET individuals
+    based on the provided data. This model is fast and should creat valid predictions.
     Nonetheless extreme care as to be taken in evaluating the results. Please consult the
     provided documentation and instructions for futher information.
     """
@@ -658,7 +656,7 @@ def main():
     col1.button(
         "Process data & calculate predictions",
         type="primary",
-        on_click=ut.calculate_predictions,
+       # on_click=ut.calculate_predictions,
         # Only run if raw data is available
         disabled=(
             len(st.session_state.data_raw) == 0
