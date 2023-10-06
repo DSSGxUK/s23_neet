@@ -95,9 +95,9 @@ Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documen
 
 Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard-Final-Presentation.pdf)
 
-Demo at the Streamlit Cloud:[here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
+Demo at the Streamlit Cloud: available [here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
 
-Video from the Shard: [here](https://warwick.ac.uk/research/data-science/warwick-data/dssgx/neet_2023.mp4)
+Video from the Shard: available [here](https://warwick.ac.uk/research/data-science/warwick-data/dssgx/neet_2023.mp4)
 
 <br>
 
