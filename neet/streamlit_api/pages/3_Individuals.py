@@ -510,7 +510,7 @@ def main():
     # Bail early if no uid is selected
     if uid is None:
         st.title("Information about one individual")
-        st.warning("Please select a young person using the menu on the left")
+        st.warning("Please select an establishment and then individual using the menu on the left")
         st.stop()
 
     # TODO: Bail early if that student was dropped in between.
