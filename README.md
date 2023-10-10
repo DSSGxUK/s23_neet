@@ -34,9 +34,13 @@ The following University of Warwick staff and fellows contributed to the project
 The project worked in collaboration with the following partners:
 
 EY Foundation
+
 City of Bradford Metropolitan District Council
+
 City of Wolverhampton Council
+
 Solihull Metropolitan Borough Council
+
 Buckinghamshire Council
 
 <br>
