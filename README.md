@@ -3,7 +3,6 @@
 Welcome to the code repository for the project conducted under Data Science for Social Good - UK 2023 (DSSGx UK).
 This README provides an overview of the project, the contributors, the folder structure of the repository, assets, information and guidance from the completed project.
 
-
 This project aimed to develop predictive models to identify individuals at risk of becoming NEET (Not
 in Education, Employment, or Training), for local authorities in England for young people between 16
 and 18 years old, and provide an open source tool to visualise the results at a council, school and individual level of granularity. 
@@ -45,8 +44,7 @@ Buckinghamshire Council
 
 <br>
 
-<details>
-<summary>  <h1> Background research summary on the implications of becoming NEET </h1> </summary>
+# Background research summary on the implications of becoming NEET
 
 The transition from adolescence to adulthood is a critical phase that shapes an individual’s future prospects,
 impacting their education, employment, and overall well-being. Among the challenges that young people
@@ -55,11 +53,13 @@ Training. The NEET status has garnered significant attention due to its associat
 particularly in terms of mental health and social exclusion. The term ”NEET” emerged in the late 1990s, in
 the United Kingdom, and has been used to capture disengagement and social exclusion among young adults
 up to the age of 35 in some countries.
+<br>
 The phenomenon of being NEET is multifaceted and influenced by various factors encompassing individual characteristics, 
 family background, socioeconomic status, educational achievements, aspirations, mental
 health, and environmental conditions. As a result, numerous studies have sought to dissect the complex
 interplay of these factors and shed light on the predictors of NEET status. Here we review and synthesise a
 range of studies that explore the determinants and consequences of being NEET.
+<br>
 The literature surrounding NEET status and its correlations present a mosaic of findings that underscore the
 intricate relationship between various factors and the likelihood of becoming NEET. Studies have illuminated
 the role of family socioeconomic status, parental education, and household income as influential factors. For
@@ -74,11 +74,13 @@ sway, influencing the transition from education to employment. Moreover, health 
 health, has garnered increased attention as a determinant of NEET status. Recent trends indicate a rising
 correlation between self-reported mental ill health and NEET status, with mental health having the largest
 effect on the probability of being NEET, especially among males.
+<br>
 The impact of environmental factors cannot be underestimated, as evidenced by the variation in NEET
 rates across different regions and local labor market conditions. Early leaving from education, referred to as
 ”EL,” has emerged as a related concept, demonstrating the need to differentiate between education-related
 disengagement and broader social exclusion. The complex interplay of these factors highlights the need for
 comprehensive and multifaceted interventions to address the NEET phenomenon effectively.
+<br>
 To sum up, the landscape of NEET research reveals a nuanced web of influences that shape the transition
 from education to employment for young people. Individual characteristics, family background, educational
 achievements, mental health, and environmental conditions collectively contribute to the risk of being NEET.
@@ -87,8 +89,6 @@ and interventions that can effectively address the challenges faced by NEET indi
 continues to evolve, there is a growing recognition of the need to consider both cognitive and non-cognitive
 factors, socioeconomic resources, aspirations, and mental health in designing strategies that support young
 people’s successful transition into adulthood.
-
-</details>
 
 <br>
 
@@ -104,48 +104,41 @@ NEETalert Tool Demo on the Streamlit Cloud: available [here](https://s23-neet-cl
 
 <br>
 
-<details>
-<summary>  <h1> Data Description </h1> </summary>
+# Data Description
 
-# NCCIS Data
+## NCCIS Data
 
 National Client Caseload Information System (NCCIS) data is submitted to the Department
 for Education(DfE) by the local authorities. It monitors and records the extent to which the individual is involved with education and training. It is the file which contains the target variable for our prediction model (through the activity codes).
 
-# School Census Data
+## School Census Data
 
 This data provides demographic information about students such as gender, ethnicity, age, language, eligibility for Free School Meals (FSMs) or Special Educational Needs (SENs). 
 
-# KS4 Data
+## KS4 Data
 
 It holds information related to the student's grades and various attainment scores.
 
-# Attendance Data
+## Attendance Data
 
 This data captures the attendance of students along with features as termly sessions, absences, and reasons for absences, e.g. exclusions, late entries etc. 
 
-# Exclusions Data
+## Exclusions Data
 
 This data captures the information about an individual’s historical exclusion status.
 
-# School Level Data
+## School Level Data
 
 The data is obtained 
-from https://www.find-school-performance-data.service.gov.uk/download-data. This source con-
-tains the school performance data for all of the England, and it was filtered at the local authority basis. This school performance data included information about the
-school postcode, that was used for the feature engineering to calculate the distance from the individual’s place of living
-to the school where they study. In addition to this, the categorisation of schools based on the Ofsted ratings helped us distinguish the relative performance of the school.
+from https://www.find-school-performance-data.service.gov.uk/download-data. The school performance dataset contains data for all schools in England, and it was filtered at the local authority level. The data includes information about the
+school postcode, which was used during feature engineering to calculate the distance from the individual’s place of living to the school where they study. In addition to this, the categorisation of schools based on the Ofsted ratings helped distinguish the relative performance of the school.
 
-# Socio-Economic Factors
+## Socio-Economic Factors
 
-The data set called as English Indices of
-Deprivation https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019 was used to source multiple scores. It
-is recorded every four years. The latest one recorded until now is for the year 2019. It provides
-the information about Income Deprivation Affecting Children Index (IDACI) and other scores, that help to
-categorise the living area of a student according to the various bands.
-
-</details>
-
+The dataset is called the English Indices of
+Deprivation and is obtained from https://www.gov.uk/government/statistics/english-indices-of-deprivation-2019. It
+is recorded every four years - the latest is for the year 2019. It provides information about Income Deprivation Affecting Children Index (IDACI) and other scores, which help to
+categorise the living area of an individual according to various bands of deprivation.
 
 <br>
 
