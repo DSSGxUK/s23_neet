@@ -90,17 +90,6 @@ continues to evolve, there is a growing recognition of the need to consider both
 factors, socioeconomic resources, aspirations, and mental health in designing strategies that support young
 people’s successful transition into adulthood.
 
-<br>
-
-# Project Resources
-
-Video from the Shard: available [here](https://warwick.ac.uk/research/data-science/warwick-data/dssgx/neet_2023.mp4)
-
-Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard-Final-Presentation.pdf)
-
-Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf) 
-
-NEETalert Tool Demo on the Streamlit Cloud: available [here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
 
 <br>
 
@@ -155,6 +144,17 @@ Our work concluded the following were the most prevalent RONIs using the range o
 
 <br>
 
+# Project Resources
+
+Video from the Shard: available [here](https://warwick.ac.uk/research/data-science/warwick-data/dssgx/neet_2023.mp4)
+
+Presentation: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/Shard-Final-Presentation.pdf)
+
+Poster: available [here](https://github.com/DSSGxUK/s23_neet/blob/master/documents/NEET%20Poster.pdf) 
+
+NEETalert Tool Demo on the Streamlit Cloud: available [here](https://s23-neet-cloud-dssg-uk.streamlit.app/)
+
+<br>
 
 # Installation
 
