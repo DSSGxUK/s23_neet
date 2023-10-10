@@ -53,13 +53,17 @@ Training. The NEET status has garnered significant attention due to its associat
 particularly in terms of mental health and social exclusion. The term ”NEET” emerged in the late 1990s, in
 the United Kingdom, and has been used to capture disengagement and social exclusion among young adults
 up to the age of 35 in some countries.
+
 <br>
+
 The phenomenon of being NEET is multifaceted and influenced by various factors encompassing individual characteristics, 
 family background, socioeconomic status, educational achievements, aspirations, mental
 health, and environmental conditions. As a result, numerous studies have sought to dissect the complex
 interplay of these factors and shed light on the predictors of NEET status. Here we review and synthesise a
 range of studies that explore the determinants and consequences of being NEET.
+
 <br>
+
 The literature surrounding NEET status and its correlations present a mosaic of findings that underscore the
 intricate relationship between various factors and the likelihood of becoming NEET. Studies have illuminated
 the role of family socioeconomic status, parental education, and household income as influential factors. For
@@ -74,13 +78,17 @@ sway, influencing the transition from education to employment. Moreover, health 
 health, has garnered increased attention as a determinant of NEET status. Recent trends indicate a rising
 correlation between self-reported mental ill health and NEET status, with mental health having the largest
 effect on the probability of being NEET, especially among males.
+
 <br>
+
 The impact of environmental factors cannot be underestimated, as evidenced by the variation in NEET
 rates across different regions and local labor market conditions. Early leaving from education, referred to as
 ”EL,” has emerged as a related concept, demonstrating the need to differentiate between education-related
 disengagement and broader social exclusion. The complex interplay of these factors highlights the need for
 comprehensive and multifaceted interventions to address the NEET phenomenon effectively.
+
 <br>
+
 To sum up, the landscape of NEET research reveals a nuanced web of influences that shape the transition
 from education to employment for young people. Individual characteristics, family background, educational
 achievements, mental health, and environmental conditions collectively contribute to the risk of being NEET.
