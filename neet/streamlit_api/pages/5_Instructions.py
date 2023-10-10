@@ -97,7 +97,7 @@ def main():
             '''
             This data captures the information about an individual’s historical exclusion status.
 
-            The data uploader expects each Attendance file to contain the following columns
+            The data uploader expects each Exclusions file to contain the following columns
             of data as a minimum:
 
             stud_id, ever_suspended, ever_excluded, exclusions_rescinded
