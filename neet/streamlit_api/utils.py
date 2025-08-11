@@ -60,7 +60,8 @@ literal_dataset_types = Literal[
     "nccis_sep_y13",
 ]
 
-COHORTS = ["2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"]
+COHORTS = ["2018-19", "2019-20", "2020-21",
+           "2021-22", "2022-23", "2023-24", "2024-25"]
 
 literal_cohorts = Literal[
     "2018-19", "2019-20", "2020-21", "2021-22", "2022-23", "2023-24", "2024-25"
@@ -95,7 +96,8 @@ div[data-testid='metric-container'] {
     background-color: #F3EDF3;
     }
     """
-    st.markdown("<style>" + str(styles, "utf-8") + "</style>", unsafe_allow_html=True)
+    st.markdown("<style>" + str(styles, "utf-8") +
+                "</style>", unsafe_allow_html=True)
 
 
 def get_file_name(
@@ -192,7 +194,8 @@ def initalize_global_state() -> None:
         # Each value should be unique.
         estabs = (st.session_state.data_final)["census_estab"].unique()
         estabs = pd.Series(estabs).dropna()
-        st.session_state.data_final_estabs = {s.title() for s in estabs.unique()}
+        st.session_state.data_final_estabs = {
+            s.title() for s in estabs.unique()}
 
     if "data_roni_score" not in st.session_state:
         roni_scores = calculate_roni_score(data)
@@ -273,6 +276,7 @@ def short_circuit_data() -> None:
         )
         st.stop()
 
+
 def scroll_to_top() -> None:
     """Triggers JavaScript to scroll to the top of the page"""
     js = """
@@ -281,7 +285,7 @@ def scroll_to_top() -> None:
             body.scrollTop = 0
         </script>"""
     components.html(js)
-    
+
 
 def map_activity_code_categories(series: pd.Series, mapping: dict) -> pd.Series:
     """
@@ -334,6 +338,7 @@ def set_synthetic_data():
         st.session_state.use_synthetic_data = True
         # Data should be read again.
 
+
 def rearrange_data() -> None:
     """
     Rearranges from the dict data structure of the dashboard to
@@ -363,7 +368,7 @@ def rearrange_data() -> None:
                 dfs.append(nested_dict["data"])
         return dfs
 
-    school_performance = st.session_state.file_schools_performance   
+    school_performance = st.session_state.file_schools_performance
     data_raw = st.session_state.data_raw
 
     # Check that all files are available. Should not be necessary,
@@ -377,8 +382,9 @@ def rearrange_data() -> None:
     exclusions = search_data_raw_dict(data_raw, "exclusions")
     ks4 = search_data_raw_dict(data_raw, "ks4")
     september_guarantee = search_data_raw_dict(data_raw, "september-guarantee")
-    nccis = search_data_raw_dict(data_raw, "nccis")    
-    school_performance = [school_performance["df"]] # to list for pre-processing
+    nccis = search_data_raw_dict(data_raw, "nccis")
+    # to list for pre-processing
+    school_performance = [school_performance["df"]]
 
     return DatasetType(
         attendance,
@@ -389,7 +395,7 @@ def rearrange_data() -> None:
         september_guarantee,
         school_performance,
     )
-    
+
 
 def calculate_predictions() -> None:
     """
@@ -397,7 +403,7 @@ def calculate_predictions() -> None:
     Results are saved to session state.
     """
     datasets = rearrange_data()
-    
+
     with st.spinner("Calculating predictions ..."):
         scroll_to_top()
         # If we have no model three we can determine the correct model like that.
@@ -407,7 +413,7 @@ def calculate_predictions() -> None:
         else:
             y_hat = streamlit_predictions(datasets, "model1")
             st.write(y_hat)
-            
+
     st.success("Predictions calculated")
     st.balloons()
 

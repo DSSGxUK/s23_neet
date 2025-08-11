@@ -70,8 +70,8 @@ docker_clean:
 #################### DATA SOURCES ACTIONS ###################
 
 create_folders:
-	mkdir /prod/data_dashboard
-	mkdir /prod/data_develop
-	mkdir /prod/data_develop/raw
-	mkdir /prod/data_develop/intermediate
-	mkdir /prod/data_develop/final
+	mkdir -p /prod/data_dashboard
+	mkdir -p /prod/data_develop
+	mkdir -p /prod/data_develop/raw
+	mkdir -p /prod/data_develop/intermediate
+	mkdir -p /prod/data_develop/final

@@ -81,11 +81,11 @@ def streamlit_predictions(
     if model_type == "model3":
         raise Exception("This model does not exist")
 
-    df = preprocess_all_data(datasets, model_type)
+    df = preprocessor.preprocess_all_data(datasets, model_type)
 
-    uids, X = test_feature_extract_clean(df, model_type)
+    uids, X = model.test_feature_extract_clean(df, model_type)
 
-    y_hat = predictions_from_pkl(X, model_type)
+    y_hat = model.predictions_from_pkl(X, model_type)
     
     # Join uids and predictions again
     #predictions = y_hat

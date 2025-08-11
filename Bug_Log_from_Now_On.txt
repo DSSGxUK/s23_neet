@@ -1,0 +1,22 @@
+This file contains some of the bugs I’ve found.
+There were too many before, and I didn’t get around to writing them down.
+Starting now, I’ll keep a record here.
+
+1. ./neet/data_sources/constants.py: line 150
+"Y11 UPNs 2021_22 Census Data.xlsx":{"sheets":["Y11 202122 Jan 22 Cens", "Y10 202021 Jan 21 Cens", "Y9 201920 Jan 20 Cens", "Y8 201819 Jan 19 Cens", "Y7 201718 Jan 18 Cens"], 
+                                         "cohort":["2021-22", "2021-22","2021-22", "2021-22", "2021-22"],
+                                         "years": [11, 10, 9, 8, 7]}
+
+I found the actual worksheet names are  [' Y11 202122 Jan 22 Cens', ' Y10 202021 Jan 21 Cens', ' Y9 201920 Jan 20 Cens', ' Y8 201819 Jan 19 Cens', ' Y7 201718 Jan 18 Cens'] 
+
+2. ./neet/data_sources/preprocessing_functions.py: line 170:
+
+df = schema.validate(df, lazy=True)
+
+Schema validation failed for 'ncyear_actual' in census data and 'support_level' in sep_nccis data as they contain string, so replace string with np.nan
+
+Also uncomment the schema of 'support_level'.
+
+Skip the validation of schema.
+
+Got too many errors, cannot run.

@@ -94,30 +94,35 @@ def preprocess_all_data(datasets:DatasetType, model_type:str) -> pd.DataFrame:
     #ks2 = ks2_preprocess()
     ks4 = ks4_preprocess(datasets.ks4)
     excluded = exclude_preprocess(datasets.exclusions)
-    school_performance = school_performance_preprocess(datasets.school_performance)
+    # school_performance = school_performance_preprocess(datasets.school_performance)
     pcd_to_lsoa_regional_scores = regional_data_preprocess()
     postcodes = postcodes_preprocess()
 
     if model_type == "model1" :
         september_guarantee = september_guarantee_preprocess(datasets.september_guarantee)
+        # join_df = preproc.joins_training_model1(nccis,attendance,excluded,census,
+        # ks4 ,pcd_to_lsoa_regional_scores,
+        # september_guarantee,school_performance,postcodes)
         join_df = preproc.joins_training_model1(nccis,attendance,excluded,census,
         ks4 ,pcd_to_lsoa_regional_scores,
-        september_guarantee,school_performance,postcodes)
+        september_guarantee,postcodes)
     elif model_type == "model2":
+        # join_df = preproc.joins_training_model2(nccis,attendance,excluded,
+        # census,ks4,pcd_to_lsoa_regional_scores,
+        # school_performance,postcodes)
         join_df = preproc.joins_training_model2(nccis,attendance,excluded,
-        census,ks4,pcd_to_lsoa_regional_scores,
-        school_performance,postcodes)
+        census,ks4,pcd_to_lsoa_regional_scores,postcodes)
     return join_df
 
 
-#model1_df = preprocess_all_data(read_datasets(), "model1")
-#print("model1",model1_df.shape)
-#model2_df= preprocess_all_data(read_datasets(), "model2")
-#print("model2",model2_df.shape)
+model1_df = preprocess_all_data(read_datasets(), "model1")
+print("model1",model1_df.shape)
+model2_df= preprocess_all_data(read_datasets(), "model2")
+print("model2",model2_df.shape)
 
-#write the files to the location
-#model1_df.to_parquet(os.getenv("INTERMEDIATE_PREPROC_MODEL1"), index=False)
-#model2_df.to_parquet(os.getenv("INTERMEDIATE_PREPROC_MODEL2"), index=False)
+# write the files to the location
+model1_df.to_parquet(os.getenv("INTERMEDIATE_PREPROC_MODEL1"), index=False)
+model2_df.to_parquet(os.getenv("INTERMEDIATE_PREPROC_MODEL2"), index=False)
 
-#model1_df.to_csv(os.getenv("CSV_INTERMEDIATE_PREPROC_MODEL1"), index=False, header = True)
-#model2_df.to_csv(os.getenv("CSV_INTERMEDIATE_PREPROC_MODEL2"), index=False, header = True)
+model1_df.to_csv(os.getenv("CSV_INTERMEDIATE_PREPROC_MODEL1"), index=False, header = True)
+model2_df.to_csv(os.getenv("CSV_INTERMEDIATE_PREPROC_MODEL2"), index=False, header = True)

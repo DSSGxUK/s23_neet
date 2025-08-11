@@ -130,7 +130,7 @@ EXCEL_FILES_ATTENDANCE = {"RONI UPNs 2018_19.xlsx":{"sheets":["Y11 201819 Attend
                "RONI UPNs 2020_21.xlsx":{"sheets":["Y11 202021 Attend", "Y11 201920 Attend", "Y11 201819 Attend", "Y11 201718 Attend", "Y11 201617 Attend"], 
                                          "cohort":["2020-21", "2020-21", "2020-21", "2020-21", "2020-21"],
                                          "years": [11, 10, 9, 8, 7]},
-               "RONI UPNs 2021_22.xlsx":{"sheets":["Y11 202122 Attendance 21_22", "Y11 202021 Attendance 20_21", "Y11 201920 Attendance 19_20", "Y11 201819 Attendance 18_19", "Y11 201718 Attendance 17_18"], 
+               "RONI UPNs 2021_22.xlsx":{"sheets":["Y11 202122 Attendance 21_22", "Y11 202122 Attendance 20_21", "Y11 202122 Attendance 19_20", "Y11 202122 Attendance 18_19", "Y11 202122 Attendance 17_18"], 
                                          "cohort":["2021-22", "2021-22","2021-22", "2021-22", "2021-22"],
                                          "years": [11, 10, 9, 8, 7]}
               }
@@ -147,10 +147,11 @@ EXCEL_FILES_CENSUS = {"Y11 UPNs 2018_19 Census Data.xlsx":{"sheets":["Y11 201819
                                          "cohort":["2020-21", "2020-21", "2020-21", "2020-21", "2020-21"],
                                          "years": [11, 10, 9, 8, 7]},
 
-               "Y11 UPNs 2021_22 Census Data.xlsx":{"sheets":["Y11 202122 Jan 22 Cens", "Y10 202021 Jan 21 Cens", "Y9 201920 Jan 20 Cens", "Y8 201819 Jan 19 Cens", "Y7 201718 Jan 18 Cens"], 
+               "Y11 UPNs 2021_22 Census Data.xlsx":{"sheets":[' Y11 202122 Jan 22 Cens', ' Y10 202021 Jan 21 Cens', ' Y9 201920 Jan 20 Cens', ' Y8 201819 Jan 19 Cens', ' Y7 201718 Jan 18 Cens'] , 
                                          "cohort":["2021-22", "2021-22","2021-22", "2021-22", "2021-22"],
                                          "years": [11, 10, 9, 8, 7]}
               }
+
 
 #EXCEL_FILES_CENSUS = {"RONI UPNs 2018_19.xlsx":{"sheets":["Y11 201819 Census"], "cohort":["2018-19"], "years":[11]},
 #               "RONI UPNs 2019_20.xlsx":{"sheets":["Y11 201920 Census"], "cohort":["2019-20"], "years":[11]},

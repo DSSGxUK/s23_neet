@@ -24,3 +24,7 @@ neet.egg-info/*
 # Data #
 data_develop/
 data_dashboard/
+
+# macOS hidden files
+.DS_Store
+/.history

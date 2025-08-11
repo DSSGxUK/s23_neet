@@ -10,8 +10,8 @@ from utils import (
     COHORTS,
     literal_cohorts,
 )
-from data_sources.preprocessing_functions import read_csv_file
-from data_sources.schema import get_schema
+from neet.data_sources.preprocessing_functions import read_csv_file
+from neet.data_sources.schema import get_schema
 
 st.set_page_config(
     page_title="Data & Predictions - NEETalert",
@@ -656,7 +656,7 @@ def main():
     col1.button(
         "Process data & calculate predictions",
         type="primary",
-       # on_click=ut.calculate_predictions,
+        on_click=ut.calculate_predictions,
         # Only run if raw data is available
         disabled=(
             len(st.session_state.data_raw) == 0

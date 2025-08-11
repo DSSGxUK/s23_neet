@@ -67,14 +67,30 @@ def compute_and_store_median(dataframe, columns_to_compute, new_column_name):
     # Add the computed medians as a new column in the DataFrame
     dataframe[new_column_name] = medians
 
+def get_column_name(df, base_name, suffix):
+    """
+    Tries to retrieve the column name with a given base name and suffix.
+    Falls back to a `.0` suffix if the primary column is not found.
+    """
+    col = f'{base_name}_{suffix}'
+    if col in df.columns:
+        return col
+
+    fallback_col = f'{base_name}_{suffix}.0'
+    if fallback_col in df.columns:
+        return fallback_col
+
+    # Raise error if neither column exists
+    raise ValueError(f"Missing column: {base_name}_{suffix} (or {base_name}_{suffix}.0)")
+
 def feature_extract_attendance (df:pd.DataFrame) -> pd.DataFrame:    
     # Calculate the percentages for each suffix digit
     year = ['8', '9', '10', '11']
 
     for suffix in year:
-        unauth_col = f'unauthorised_absence_{suffix}'
-        auth_col = f'authorised_absence_{suffix}'
-        poss_col = f'possible_sessions_{suffix}'
+        unauth_col = get_column_name(df, 'unauthorised_absence', suffix)
+        auth_col = get_column_name(df, 'authorised_absence', suffix)
+        poss_col = get_column_name(df, 'possible_sessions', suffix)
         
         df[f'unauth_percentage_{suffix}'], df[f'auth_percentage_{suffix}'] = calculate_percentage(df[unauth_col], df[auth_col], df[poss_col])
     

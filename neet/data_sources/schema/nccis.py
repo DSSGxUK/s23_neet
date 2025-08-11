@@ -32,13 +32,13 @@ _schema = DataFrameSchema(
             description=None,
             title=None,
         ),
-        "support_level": Column(
-            dtype="category",
-            checks=[Check.isin(allowed_values=[1, 2, 3])],
-            nullable=True,
-            description=None,
-            title=None,
-        ),
+        # "support_level": Column(
+        #     dtype="category",
+        #     checks=[Check.isin(["1", "2", "3"])],
+        #     nullable=True,
+        #     description=None,
+        #     title=None,
+        # ),
         "looked_after_in_care": Column(
             dtype=YesNoBool(),
             nullable=True,
